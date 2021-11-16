@@ -1,34 +1,28 @@
 package com.hotelreservation;
 
+import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.List;
-
-import static org.junit.Assert.assertEquals;
-
-/*
- * Creating Class For HotelReservationTest 
- */
-
 public class HotelReservationTest {
-	//Writing Test 
+	HotelReservationSystem hotelReservation = new HotelReservationSystem();
+
 	@Test
-	/*
-	 * Creating Method for hotelDetails
-	 */
-	public void hotelDetails() {
-		//Creating the Object and Passing the Value
-		Hotel h1 = new Hotel("Lakeewood",100,300,3);
-		Hotel h2 = new Hotel("Bridgewood", 200,400, 4);
-		Hotel h3 = new Hotel("Ridgewood", 300,500, 5);
-		Hotel[] hotelList = { h1, h2, h3 };
-		// Creating Object for HotelReservation
-		HotelReservation hotelReservation = new HotelReservation();
-		hotelReservation.add(h1);
-		hotelReservation.add(h2);
-		hotelReservation.add(h3);
-		//Check The Result
-		List<Hotel> result = hotelReservation.getHotelList();
-		assertEquals(hotelList, result);
+	public void whenAddedHotel_ShouldReturn_AddedHotel() {
+		try {
+			boolean isValid1 = hotelReservation.addHotel(new Hotel("LakeWood", 100, 80));
+			Assert.assertTrue(isValid1);
+			boolean isValid2 = hotelReservation.addHotel(new Hotel("Bridgewood", 200, 100));
+			Assert.assertTrue(isValid2);
+			boolean isValid3 = hotelReservation.addHotel(new Hotel("Ridgewood", 300, 120));
+			Assert.assertTrue(isValid3);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Test
+	public void toFindTheChepeastHotel() {
+		HotelReservationSystem cheapHotel = new HotelReservationSystem();
+		cheapHotel.findCheapestHotel();
 	}
 }
