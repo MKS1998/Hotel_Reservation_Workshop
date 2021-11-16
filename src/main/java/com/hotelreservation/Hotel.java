@@ -1,5 +1,6 @@
 package com.hotelreservation;
 
+
 public class Hotel {
 	private String hotelName;
 	private String customerType;
@@ -15,7 +16,9 @@ public class Hotel {
 		this.hotelWeekendRate = hotelWeekendRate;
 		this.hotelStarRating = hotelStarRating;
 	}
-
+	/**
+	 * Purpose - Implementation of setters and getters
+	 */
 	public String getHotelName() {
 		return hotelName;
 	}

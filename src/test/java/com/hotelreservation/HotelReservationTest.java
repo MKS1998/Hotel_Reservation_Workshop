@@ -37,4 +37,10 @@ public class HotelReservationTest {
 		HotelReservationSystem cheapHotel = new HotelReservationSystem();
 		cheapHotel.findCheapestBestRatedHotel();
 	}
+
+	@Test
+	public void toFindTheBestRatedHotel_OnWeekdayAndWeekend() {
+		HotelReservationSystem cheapHotel = new HotelReservationSystem();
+		cheapHotel.findBestRatedHotel();
+	}
 }
