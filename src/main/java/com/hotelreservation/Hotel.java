@@ -1,72 +1,28 @@
 package com.hotelreservation;
 
 public class Hotel {
+	private String hotelName;
+	private int hotelRegularRate;
 
-	private String name;
-	private int regularWeekdayRate;
-	private int regularWeekendRate;
-	private int rewardsWeekdayRate;
-	private int rewardsWeekendRate;
-	private int rating;
-	//Parameterized to initialize variable
-	public Hotel(String name, int regularWeekdayRate, int regularWeekendRate, int rewardsWeekdayRate,
-			int rewardsWeekendRate, int rating) {
-		this.name = name;
-		this.regularWeekdayRate = regularWeekdayRate;
-		this.regularWeekendRate = regularWeekendRate;
-		this.rewardsWeekdayRate = rewardsWeekdayRate;
-		this.rewardsWeekendRate = rewardsWeekendRate;
-		this.rating = rating;
-	}
-	/*
-	 *Use The Getter Setter Methods
-	 */
-	public String getName() {
-		return name;
+	public String getHotelName() {
+		return hotelName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setHotelName(String hotelName) {
+		this.hotelName = hotelName;
 	}
 
-	public int getRegularWeekdayRate() {
-		return regularWeekdayRate;
+	public int getHotelRegularRate() {
+		return hotelRegularRate;
 	}
 
-	public void setRegularWeekdayRate(int regularWeekdayRate) {
-		this.regularWeekdayRate = regularWeekdayRate;
+	public void setHotelRegularRate(int hotelRegularRate) {
+		this.hotelRegularRate = hotelRegularRate;
 	}
 
-	public int getRegularWeekendRate() {
-		return regularWeekendRate;
-	}
+	public Hotel(String hotelName, int hotelRegularRate) {
+		this.hotelName = hotelName;
+		this.hotelRegularRate = hotelRegularRate;
 
-	public void setRegularWeekendRate(int regularWeekendRate) {
-		this.regularWeekendRate = regularWeekendRate;
 	}
-
-	public int getRewardsWeekdayRate() {
-		return rewardsWeekdayRate;
-	}
-
-	public void setRewardsWeekdayRate(int rewardsWeekdayRate) {
-		this.rewardsWeekdayRate = rewardsWeekdayRate;
-	}
-
-	public int getRewardsWeekendRate() {
-		return rewardsWeekendRate;
-	}
-
-	public void setRewardsWeekendRate(int rewardsWeekendRate) {
-		this.rewardsWeekendRate = rewardsWeekendRate;
-	}
-
-	public int getRating() {
-		return rating;
-	}
-
-	public void setRating(int rating) {
-		this.rating = rating;
-	}
-
 }
